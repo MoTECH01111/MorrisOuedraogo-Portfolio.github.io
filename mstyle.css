@@ -1,11 +1,11 @@
 /* Main */
 /* Footer */
 .footer {
-
-    background:#000000;
+    background: #000000;
     padding: 20px 0;
     text-align: center;
-    color:rgb(255, 255, 255)
+    color: rgb(255, 255, 255);
+    font-family: 'Orbitron', sans-serif; /* Apply Orbitron */
 }
 .footer-left {
     text-align: left;
@@ -20,9 +20,9 @@
 /* Main End */
 
 .custom-bg-color {
-    background:#000000; /* !important to override default Bootstrap style */
+    background: #000000; /* !important to override default Bootstrap style */
+    font-family: 'Orbitron', sans-serif; /* Apply Orbitron */
 }
-
 
 /* adapt side bar */
 @media (min-width: 768px) {
@@ -37,9 +37,8 @@
     }
 
     .sidebar .navbar-brand img {
-        width: 100px; /* degris logo size for small screen */
+        width: 100px; /* reduce logo size for small screen */
     }
-
 }
 
 /* side nav bar */
@@ -48,22 +47,35 @@
     top: 0;
     bottom: 0;
     left: 0;
-    z-index: 100; /* on other lements */
+    z-index: 100; /* over other elements */
     width: 45px;
-    padding: 48px 0 0; /* top padding  */
+    padding: 48px 0 0; /* top padding */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* shadow */
+    font-family: 'Orbitron', sans-serif; /* Apply Orbitron */
 }
 
 .sidebar .nav-link {
-    color: #fff; /* Цвет ссылок */
+    color: #fff; /* link color */
+    font-family: 'Orbitron', sans-serif; /* Apply Orbitron */
 }
 
-body{
+body {
     background-image: url("img/back.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
     font-size: 20px;
+    font-family: 'Orbitron', sans-serif; /* Apply Orbitron */
 }
 
-     
+h1, h2, h3, h4, h5, h6, p, a, span {
+    font-family: 'Orbitron', sans-serif; /* Apply Orbitron to headings, paragraphs, links, and spans */
+}
+
+/* Apply the font-weight */
+.orbitron-custom {
+    font-family: 'Orbitron', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500; /* Set a default weight, change as needed */
+    font-style: normal;
+}
