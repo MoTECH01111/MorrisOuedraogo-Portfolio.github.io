@@ -79,3 +79,13 @@ h1, h2, h3, h4, h5, h6, p, a, span {
     font-weight: 500; /* Set a default weight, change as needed */
     font-style: normal;
 }
+
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff !important; /* Ensure text is white */
+}
+
+.navbar-dark .navbar-brand {
+    color: #ffffff !important; /* Ensure brand text is white if applicable */
+}
+
