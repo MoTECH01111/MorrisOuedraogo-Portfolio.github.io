@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <title>My Project Catalog</title>
 
@@ -15,12 +17,11 @@
 
 <style>
     body {
-        min-height: 175vh;
+        min-height: 150vh;
     }
 </style>
 
 <body>
-
 
 <!-- Navigation -->
 <nav class="navbar navbar-dark custom-bg-color" aria-label="label">
@@ -41,24 +42,75 @@
     </div>
 </nav>
 <br>
+
 <!-- Carousel Gallery Section -->
 <section class="gallery py-5">
     <div class="container">
         <h2 class="text-center mb-4">Project Catalog</h2>
 
+        <br><br>
         <!-- Bootstrap Carousel -->
         <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
+               
+                <!-- XML Project -->
                 <div class="carousel-item active text-center">
                     <img src="SampleCode/XML.png" class="d-block mx-auto img-fluid" alt="XML snapshot">
-                    <br><br>
+                    <br>
                     <h5>XML</h5>
+                    <br>
+                    <p>Here is an example of an XML file I created for a Clothing business for an individual CA in my Aeb Application. This XML stores different clothing items which on the frontend a consumer can search Information about the item.</p>
+                    <br><br>
+                    <a class="link" href="https://github.com/MoTECH01111/STOCK---CHECK-IT-WEB-APP" target="_blank">Click the Link to view see the demonstration on my Github</a>
                 </div>
 
+                <!-- Front End Result -->
+                <div class="carousel-item text-center">
+                    <img src="SampleCode/checkFe.png" class="d-block mx-auto img-fluid" alt="checkFe">
+                    <br><br>
+                    <h5>This is the front end result when a consumer searches for their interested product. They can see all the availability, price, size, etc., about the product through the item ID stored in the XML file.</h5>
+                </div>
+
+                <!-- Python EirQ Login -->
                 <div class="carousel-item text-center">
                     <img src="SampleCode/eirQlogin.png" class="d-block mx-auto img-fluid" alt="Python snapshot">
-                    <br><br>
+                    <br>
                     <h5>Python: EirQ Login using Firebase Auth</h5>
+                    <br>
+                    <p>This code snippet demonstrate a login system for my Second year project, utilizing Firebase for authentication. It provides a secure login for the EirQ Users who can login into their account and track their air quality. Signing up with their email and password</p>
+                </div>
+
+                <!-- Front End Result --> 
+                <div class="carousel-item text-center">
+                    <img src="SampleCode/EirqFe.png" class="d-block mx-auto img-fluid" alt="EirqFe">
+                    <br>
+                    <h5>This is the front end result of the login page Once the user is verified they can sign and see the dashboard and see their realtime results.</h5>
+                    
+                </div>
+
+                <!-- Python EirQ Signup -->
+                <div class="carousel-item text-center">
+                    <img src="SampleCode/Signup.png" class="d-block mx-auto img-fluid" alt="Signup">
+                    <br>
+                    <h5>Python: EirQ Signup using FireStore/Auth</h5>
+                    <br>
+                    <p>This code snippet demonstrates a Signup system for my Second year project, utilizing Firebase for FireStore. When a new user register's on signup it is sent to the firstore and saved within the firstore database. This will prompt the user to verify themselves via email and ove they do they can sign in as normal </p>
+                </div>
+
+                <!-- React Weather App -->
+                <div class="carousel-item text-center">
+                    <img src="SampleCode/weather.png" class="d-block mx-auto img-fluid" alt="React Weather App snapshot">
+                    <br><br>
+                    <h5>React: Weather App</h5>
+                    <p>A dynamic weather application built with React and the OpenWeather API. It provides real-time weather data based on the user's current location or any searched city.</p>
+                </div>
+
+                <!-- C# Inventory Management System -->
+                <div class="carousel-item text-center">
+                    <img src="SampleCode/inventory.png" class="d-block mx-auto img-fluid" alt="C# snapshot">
+                    <br><br>
+                    <h5>C#: Inventory Management System</h5>
+                    <p>A C# Windows Form application that helps manage inventory for a small business. Features include product tracking, quantity updates, and detailed reporting.</p>
                 </div>
             </div>
 
@@ -74,8 +126,11 @@
         </div>
     </div>
 </section>
-</body>
 
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+</body>
 </html>
+
+
