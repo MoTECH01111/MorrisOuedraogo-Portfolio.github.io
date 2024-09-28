@@ -163,3 +163,62 @@ h1, h2, h3, h4, h5, h6, p, a, span {
     color: white;
     border: 1px solid white;
 }
+
+
+    /* Main container for images and paragraphs */
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+        gap: 30px;
+        padding: 40px;
+        max-width: 80%;
+        margin: 0 auto; /* Center the grid */
+    }
+
+    /* Style each grid item */
+    .grid-item {
+        text-align: center;
+    }
+
+    .grid-item img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover; /* images maintain aspect ratio */
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .grid-item p {
+        background-color: rgba(0, 0, 0, 0.5); /* Slight transparency */
+        padding: 10px;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 18px;
+    }
+    
+    .footer {
+        background: #000000;
+        padding: 20px 0;
+        color: aliceblue;
+        text-align: center;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .footer-left {
+        text-align: left;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+
+    .footer-logo {
+        max-width: 300px;
+        height: auto;
+    }
+
+    .custom-bg-color {
+        background: #000000 !important;
+    }
