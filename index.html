@@ -23,11 +23,11 @@
         </a>
         <div class="collapse navbar-collapse" id="navbarsExample01">
             <ul class="navbar-nav me-auto mb-2">
-                <li class="nav-item"><a class="nav-link" href="index.html">My Biography</a></li>
-                <li class="nav-item"><a class="nav-link" href="lang.html">Program Language's</a></li>
-                <li class="nav-item"><a class="nav-link" href="software.html">Application Software's</a></li>
-                <li class="nav-item"><a class="nav-link" href="myProj.html">My Project's</a></li>
-                <li class="nav-item"><a class="nav-link" href="ceqfa.html">My Certification's</a></li>
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">My Biography</a></li>
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="lang.html">Program Language's</a></li>
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="software.html">Application Software's</a></li>
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="myProj.html">My Project's</a></li>
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="ceqfa.html">My Certification's</a></li>
             </ul>
         </div>
     </div>
@@ -110,9 +110,11 @@
         <a href="assets/MoMyCv..pdf" class="btn btn-primary" download>Download My CV</a>
     </div>
 </section>
-
 <br>
-
+<br>
+<br>
+<br>
+<br>
 <!-- Footer -->
 <footer class="footer">
     <div class="container">
@@ -123,6 +125,10 @@
             </div>
             <div class="col-md-6 text-md-end">
                 <img src="img/logo.png" alt="footer-logo" class="footer-logo rounded" height="100">
+
+                <a href="https://www.linkedin.com/in/morrisouedraogo/" target="_blank">
+                    <img src="img/link.png" alt="LinkedIn" class="footer-logo ms-3" height="30">
+                </a>
             </div>
         </div>
     </div>
@@ -158,13 +164,28 @@
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+<!-- Email Js library -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<!-- Initialize EmailJS -->
+<script type="text/javascript">
+    (function() {
+        emailjs.init("v0qTeqGEZRn79PUC0");  //EmailJS public key
+    })();
+</script>
+
+<!-- Chat Modal Script -->
 <script>
     function toggleChat() {
         const modal = document.getElementById("chatModal");
         modal.style.display = modal.style.display === "block" ? "none" : "block";
     }
 
+
     function sendMessage() {
+
+        console.log("Send button clicked!");
+
         const fullName = document.getElementById("fullName").value;
         const emailAddress = document.getElementById("emailAddress").value;
         const subject = document.getElementById("subject").value;
@@ -173,15 +194,31 @@
         if (!fullName || !emailAddress || !subject || !message) {
             alert("Please fill out all fields before sending.");
         } else {
-            alert(`Message sent! \nName: ${fullName}\nEmail: ${emailAddress}\nSubject: ${subject}\nMessage: ${message}`);
-            document.getElementById("fullName").value = '';
-            document.getElementById("emailAddress").value = '';
-            document.getElementById("subject").value = '';
-            document.getElementById("chatMessage").value = '';
-            toggleChat(); // Close the modal
+            const templateParams = {
+                from_name: fullName,
+                email: emailAddress,
+                subject: subject,
+                message: message
+            };
+
+            console.log("Sending message with params:", templateParams);
+
+            emailjs.send("service_k7l1c0j", "template_k8rohul", templateParams)
+                .then(function(response) {
+                    console.log("Success!", response.status, response.text);
+                    alert('Message sent successfully!');
+                    document.getElementById("fullName").value = '';
+                    document.getElementById("emailAddress").value = '';
+                    document.getElementById("subject").value = '';
+                    document.getElementById("chatMessage").value = '';
+                    toggleChat(); // Close the modal
+                }, function(error) {
+                    console.error("Failed to send message.", error);
+                    alert('Failed to send message. Please try again later.');
+                });
         }
     }
-</script>
 
+</script>
 </body>
 </html>
